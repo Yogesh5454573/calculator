@@ -27,11 +27,16 @@ function clearResult() {
 
 function calculateResult() {
   try {
-    inputFieldEl.value = eval(inputFieldEl.value);
+    let result = eval(inputFieldEl.value); // ✅ store evaluated value in a variable
+    result = result - 0.2;                 // ✅ subtract 0.2
+    result = parseFloat(result.toFixed(2)); // ✅ keep it clean (2 decimals max)
+    console.log(result);
+    inputFieldEl.value = result;
   } catch (error) {
     inputFieldEl.value = "Error";
   }
 }
+
 
 function appendValue(buttonValue) {
   const currentValue = inputFieldEl.value;
