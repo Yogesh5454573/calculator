@@ -27,9 +27,9 @@ function clearResult() {
 
 function calculateResult() {
   try {
-    let result = eval(inputFieldEl.value); // ✅ store evaluated value in a variable
-    result = result - 0.2;                 // ✅ subtract 0.2
-    result = parseFloat(result.toFixed(2)); // ✅ keep it clean (2 decimals max)
+    let result = eval(inputFieldEl.value); 
+    result = result - 0.2;                
+    result = parseFloat(result.toFixed(2)); 
     console.log(result);
     inputFieldEl.value = result;
   } catch (error) {
